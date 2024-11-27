@@ -71,8 +71,8 @@ a {
 
   #blog-list {
     position: absolute;
-    left: -100px;
-    width: 100px;
+    right: calc(var(--container-width) - 8px);
+    min-width: 200px;
     padding: calc(var(--unit) * 1);
     background-color: var(--color-background);
     border: 3pt solid rgba(0, 0, 0, 1);
