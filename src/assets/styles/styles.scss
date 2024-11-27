@@ -8,35 +8,113 @@
  * ZeroPoint starter styling
 */
 body {
+  padding: 1px;
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: #000000;
   font-family: var(--font-family-sans-serif);
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 a {
   color: var(--color-primary);
+
+  &:visited {
+    color: var(--color-primary-dark);
+  }
+}
+
+#background {
+  position: absolute;
+  z-index: 0;
+  line-height: 0;
+  overflow: hidden;
+
+  > div {
+    white-space: nowrap;
+  }
+
+  .cell {
+    display: inline-block;
+    margin: 1px;
+    background-color: var(--color-background);
+    transition: background-color 1s ease-out;
+
+    &:hover {
+      background-color: var(--color-tertiary);
+      transition: none;
+    } 
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -101;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(rgb(0, 0, 0), var(--color-tertiary-dark), rgb(0, 0, 0));
+    animation: verticalScroll 10s linear infinite;
+  }
 }
 
 #main {
+  position: relative;
+  z-index: 1;
   max-width: var(--container-width);
+  min-height: 250px;
   margin: calc(var(--unit) * 5) auto;
+  padding: calc(var(--unit) * 1);
+  background-color: var(--color-background);
+  border: 3pt solid rgba(0, 0, 0, 1);
+  border-radius: 10px;
+
+  #blog-list {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    padding: calc(var(--unit) * 1);
+    background-color: var(--color-background);
+    border: 3pt solid rgba(0, 0, 0, 1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }
 
 #navigation {
+  position: relative;
+  z-index: 1;
   display: flex;
-  border-bottom: 1px solid var(--color-light);
-  margin: var(--unit);
+  height: 50px;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 #footer {
-  margin: auto;
-  max-width: var(--container-width);
-  border-top: 1px solid var(--color-light);
-  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 40px;
+  width: 100vw;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0.25turn, rgb(0, 0, 0) 40%, var(--color-tertiary) 50%, rgb(0, 0, 0) 60%);
+    animation: horizontalBounce 3s linear infinite;
+  }
 }
 
 hr {
   border-color: var(--color-light);
+  margin: 20px 0;
 }
 
 img {
@@ -59,6 +137,10 @@ button {
   width: 1px;
 }
 
+ul {
+  list-style: none;
+}
+
 label,
 input,
 textarea {
@@ -72,4 +154,21 @@ button {
 
 label {
   padding: calc(var(--unit) / 2) 0;
+}
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes horizontalBounce {
+  0%, 100% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
 }

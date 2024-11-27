@@ -5,13 +5,18 @@
   --color-text: #222;
   --color-background: white;
   --color-light: silver;
-  --color-primary: #7950f2;
+  --color-primary: #00aa00;
+  --color-primary-dark: #007700;
+  --color-secondary: #2e2eff;
+  --color-secondary-dark: #171788;
+  --color-tertiary: #aa0000;
+  --color-tertiary-dark: #550000;
 
   /**
     Spacing and units
   */
   --unit: 1rem;
-  --container-width: 60ch;
+  --container-width: 100ch;
 
   /**
     Fonts

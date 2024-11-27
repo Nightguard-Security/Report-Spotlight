@@ -1,16 +1,18 @@
 ---
+title: Nightguard Security
 permalink: /
-title: Up to zero! 🪐
+---
+<br />
+
+Nightguard is a community of security experts that research and author software that aides the security of other software.  From blackhat penetration testing to blueteam defense applications, you can probably find what you're looking for here.
+
+<br />
+
+Want to stay current on trending security news?  Check out the <a href="/blog/"> Report Spotlight</a> , a blog where we discuss the latest CVE reports.
+
 ---
 
-Get started:
+At Nightguard we welcome all security experts, from all walks of life.  Please note that we are a supportive and safe place for the LGBT+ community.  Anything that threatens our security will be throughly investigated and nuetralized.
 
-You can write content in HTML, [Markdown](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet), or [Nunjucks](https://mozilla.github.io/nunjucks/). This page is written in Markdown.
-
-* Edit this page: `src/content/pages/index.md`
-* Add or edit navigation: `src/data/navigation.json`
-* Change colors and styles: `src/assets/styles/`
-
----
-
-{% image "/assets/images/favicon.svg", "ZeroPoint Favicon" %}
+<br />
+--> Nightguard Security

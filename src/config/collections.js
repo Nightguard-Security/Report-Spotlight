@@ -4,21 +4,20 @@
 */
 
 export default {
-  // /**
-  // * Blog posts
-  // */
-  // posts: function (eleventyConfig) {
-  // eleventyConfig.addCollection("posts", function(collectionApi) {
-  //    return collectionApi.getFilteredByGlob("src/content/posts/*.md");
-  //  });
-  // },
 
+  /**
+   * Articles
+   */
+  articles: async function (eleventyConfig) {
+    eleventyConfig.addCollection("articles", function(collectionApi) {
+      return collectionApi.getFilteredByGlob("src/content/articles/**/*.md");
+    });
+  },
 
   /**
    * Pages
    */
   pages: async function (eleventyConfig) {
-    // Get all `.md` files in the `src/pages` directory
     eleventyConfig.addCollection("pages", function(collectionApi) {
       return collectionApi.getFilteredByGlob("src/content/pages/**/*.md");
     });
