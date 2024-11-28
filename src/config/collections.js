@@ -21,5 +21,14 @@ export default {
     eleventyConfig.addCollection("pages", function(collectionApi) {
       return collectionApi.getFilteredByGlob("src/content/pages/**/*.md");
     });
+  },
+
+  /**
+   * Writeups
+   */
+  writeups: async function (eleventyConfig) {
+    eleventyConfig.addCollection("writeups", function(collectionApi) {
+      return collectionApi.getFilteredByGlob("src/content/writeups/**/*.md");
+    });
   }
 }
