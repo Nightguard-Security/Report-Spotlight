@@ -26,7 +26,8 @@
     -apple-system;
 
   @media (prefers-color-scheme: dark) {
-    --color-text: #fff;
+    --color-text: #DDDDDD;
+    --color-text-dark: #999999;
     --color-background: #222;
   }
 }

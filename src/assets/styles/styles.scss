@@ -79,6 +79,14 @@ a {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
+
+  .article-image {
+    margin: 10px auto;
+    background-color: #000000;
+    border: 2px solid var(--color-text-dark);
+    border-radius: 10px;
+    width: 80%;
+  }
 }
 
 #navigation {
