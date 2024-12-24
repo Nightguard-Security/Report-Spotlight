@@ -81,11 +81,38 @@ a {
   }
 
   .article-image {
-    margin: 10px auto;
-    background-color: #000000;
-    border: 2px solid var(--color-text-dark);
-    border-radius: 10px;
-    width: 80%;
+    display: none;
+
+    &:not(:checked) + label {
+      margin: 10px auto;
+      background-color: #000000;
+      border: 2px solid var(--color-text-dark);
+      border-radius: 10px;
+      width: 80%;
+    }
+
+    &:checked + label {
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      content: '';
+      background: rgba(0, 0, 0, 0.8);
+
+      & > img {
+        position: fixed;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 1em;
+      }
+    }
   }
 }
 
@@ -162,6 +189,10 @@ button {
 
 label {
   padding: calc(var(--unit) / 2) 0;
+}
+
+code {
+  color: var(--color-primary-dark);
 }
 
 @keyframes verticalScroll {
